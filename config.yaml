@@ -1,6 +1,6 @@
-baseURL: http://example.org/
+baseURL: https://joyyyshi.netlify.app/ 
 languageCode: en-us
-title: Forty
+title: Portfolio website for Joy Shi
 theme: forty
 googleAnalytics: ''
 disqusShortname: ''
@@ -10,7 +10,7 @@ params:
     subtitle: |-
       A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
       AND RELEASED UNDER THE CREATIVE COMMONS.
-    title: Hi, my name is Forty
+    title: Hi, my name is Yuqiao(Joy) Shi.| big fan of Harry Potter | INFP
   blog: {}
   contact:
     address:
@@ -21,7 +21,7 @@ params:
     buttonClear: Clear
     buttonSend: Send message
     email:
-      - email: example@domain.com
+      - email: yshi.mam2023@london.edu
         title: Email
     enable: yes
     phone:
@@ -35,7 +35,7 @@ params:
     text: Please visit [this page](/)
   favicon: favicon.ico
   footer:
-    copyright: Company Name
+    copyright: Joy
     enable: yes
     quicklinks:
       - alt: HTML5 UP
@@ -44,19 +44,19 @@ params:
     social:
       - icon: fa-twitter
         label: Twitter
-        url: https://www.twitter.com
-      - icon: fa-facebook
-        label: Facebook
-        url: https://www.facebook.com
-      - icon: fa-instagram
-        label: Instagram
-        url: https://www.instagram.com
-      - icon: fa-github
-        label: GitHub
-        url: https://www.github.com
+        url: https://twitter.com/JoyyyShi0809
+#      - icon: fa-facebook
+#        label: Facebook
+#        url: https://www.facebook.com
+#      - icon: fa-instagram
+#        label: Instagram
+#        url: https://www.instagram.com
+#      - icon: fa-github
+#        label: GitHub
+#        url: https://www.github.com
       - icon: fa-linkedin
         label: LinkedIn
-        url: https://www.linkedin.com
+        url: https://www.linkedin.cn/incareer/in/yuqiao-shi-52639a20a
   image: ''
   name: Your name
   navigation:
