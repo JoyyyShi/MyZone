@@ -6,6 +6,7 @@ googleAnalytics: ''
 disqusShortname: ''
 params:
   banner:
+    image: xxx.jpg
     buttonText: Get Started
     subtitle: |-
       Bachelor of Business Administration @ Renmin University of China | Masters
@@ -83,15 +84,15 @@ params:
       - image: pic01.jpg
         subtitle: Do you want to know more about my life?
         title: Life Silhouette
-        url: blogs/aliquam
+        url: blogs/about_me
       - image: pic02.jpg
         subtitle: Feugiat Amet Tempus
-        title: Tempus
-        url: blogs/tempus
+        title: Homework 1
+        url: blogs/homework1
       - image: pic03.jpg
         subtitle: Lorem Etiam Nullam
-        title: Magna
-        url: blogs/magna
+        title: My cv
+        url: blogs/cv.pdf
       - image: pic04.jpg
         subtitle: Nisl Sed Aliquam
         title: Ipsum
