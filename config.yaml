@@ -79,13 +79,13 @@ params:
         title: Life Silhouette
         url: blogs/About_me
       - image: pic02.jpg
-        subtitle: Feugiat Amet Tempus
+        subtitle: How do you think about homework?
         title: Homework 1
-        url: blogs/homework1
+        url: blogs/homework1.html
       - image: pic03.jpg
         subtitle: Lorem Etiam Nullam
         title: My cv
-        url: blogs/cv.pdf
+        url: blogs/CV_Yuqiao Shi.pdf
       - image: pic04.jpg
         subtitle: Nisl Sed Aliquam
         title: Ipsum
