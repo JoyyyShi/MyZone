@@ -8,9 +8,11 @@ params:
   banner:
     buttonText: Get Started
     subtitle: |-
-      A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
-      AND RELEASED UNDER THE CREATIVE COMMONS.
-    title: Hi, my name is Yuqiao(Joy) Shi.| big fan of Harry Potter | INFP
+      Bachelor of Business Administration @ Renmin University of China | Masters
+      in Analytics and Management @ LBS
+      
+      A big fan of Harry Potter | INFP
+    title: Hi, welcome to website of Yuqiao(Joy) Shi.
   blog: {}
   contact:
     address:
@@ -25,7 +27,7 @@ params:
         title: Email
     enable: yes
     phone:
-      - phone: (000) 000-0000 x1234
+      - phone: (0) 7474-896889
         title: Phone
   custom_css: []
   custom_js: []
@@ -38,9 +40,6 @@ params:
     copyright: Joy
     enable: yes
     quicklinks:
-      - alt: HTML5 UP
-        text: 'Design: '
-        url: https://www.html5up.net
     social:
       - icon: fa-twitter
         label: Twitter
@@ -82,8 +81,8 @@ params:
     enable: yes
     showcase:
       - image: pic01.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Aliquam
+        subtitle: Do you want to know more about my life?
+        title: Life Silhouette
         url: blogs/aliquam
       - image: pic02.jpg
         subtitle: Feugiat Amet Tempus
