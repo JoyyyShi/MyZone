@@ -6,21 +6,18 @@ googleAnalytics: ''
 disqusShortname: ''
 params:
   banner:
-    image: xxx.jpg
     buttonText: Get Started
     subtitle: |-
-      Bachelor of Business Administration @ Renmin University of China | Masters
+      Bachelor of Business Administration @ Renmin University of China,<br> Masters
       in Analytics and Management @ LBS
-      
-      A big fan of Harry Potter | INFP
     title: Hi, welcome to website of Yuqiao(Joy) Shi.
   blog: {}
   contact:
     address:
-      - city: City, ST 00000
-        country: Country
-        street: Street
-        title: Address
+      - city: London
+        country: UK
+        street: Regent's Park
+        title: London Business School
     buttonClear: Clear
     buttonSend: Send message
     email:
@@ -51,9 +48,9 @@ params:
 #      - icon: fa-instagram
 #        label: Instagram
 #        url: https://www.instagram.com
-#      - icon: fa-github
-#        label: GitHub
-#        url: https://www.github.com
+      - icon: fa-github
+        label: GitHub
+        url: https://github.com/JoyyyShi
       - icon: fa-linkedin
         label: LinkedIn
         url: https://www.linkedin.cn/incareer/in/yuqiao-shi-52639a20a
