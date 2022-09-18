@@ -8,7 +8,7 @@ params:
   banner:
     buttonText: Get Started
     subtitle: |-
-      Bachelor of Business Administration @ Renmin University of China,<br> Masters
+      Bachelor of Business Administration @ RUC, Masters
       in Analytics and Management @ LBS
     title: Hi, welcome to website of Yuqiao(Joy) Shi.
   blog: {}
@@ -60,9 +60,6 @@ params:
     button1:
       - name: Get Started
         url: blogs
-    button2:
-      - name: Log In
-        url: '#'
     links:
       - name: Home
         url: '#'
@@ -73,7 +70,6 @@ params:
       - name: Elements
         url: elements.html
     menu: Menu
-    subtitle: By HTML5 Up
     title: Forty
   tiles:
     enable: yes
@@ -81,7 +77,7 @@ params:
       - image: pic01.jpg
         subtitle: Do you want to know more about my life?
         title: Life Silhouette
-        url: blogs/about_me
+        url: blogs/About_me
       - image: pic02.jpg
         subtitle: Feugiat Amet Tempus
         title: Homework 1
