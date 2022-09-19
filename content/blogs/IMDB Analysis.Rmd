@@ -1,0 +1,148 @@
+---
+title: "IMDB Analysis"
+author: "Joy"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r, setup, echo=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+options(digits = 3)
+
+# default figure size
+knitr::opts_chunk$set(
+  fig.width=6.75, 
+  fig.height=6.75,
+  fig.align = "center"
+)
+```
+
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(mosaic)
+library(ggthemes)
+library(skimr)
+library(janitor)
+library(vroom)
+library(tidyquant)
+library(forcats)
+library(patchwork)
+library(tidytext)
+library(dplyr)
+library(ggrepel)
+library(knitr)
+```
+
+# Analysis of movies- IMDB dataset
+
+In this part I will look at a subset sample of movies, taken from the [Kaggle IMDB 5000 movie dataset](https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset)
+
+```{r load_movies}
+movies <- read_csv("C:/Users/Yuqiao Shi/Desktop/好好学习/LBS/am01_0907/data/movies.csv")
+```
+
+There are 11 variables in this dataset, 3 of them are characters and 8 are numeric: `title`, `genre`, `director`, `year`, and `duration`, the rest of the variables are as follows:
+
+-   `gross` : The gross earnings in the US box office, not adjusted for inflation
+-   `budget`: The movie's budget
+-   `cast_facebook_likes`: the number of facebook likes cast members received
+-   `votes`: the number of people who voted for (or rated) the movie in IMDB
+-   `reviews`: the number of reviews for that movie
+-   `rating`: IMDB average rating
+
+## Before begining my work
+
+Before I dig deep in the dataset, I want to firstly check if my dataset is "clean"
+
+```{r check the dataset}
+# If there is NA.
+print("Number of missing values: ") 
+sum(is.na(movies)) # Fortunately, there is no NA.
+# If there is duplicate values
+print("Number of duplicate values: ") 
+sum(duplicated(movies)) # no, there are no duplicate entries
+```
+
+It seems that the data is tidy. Let's begin to work on it!
+
+## Explore the data
+
+### Genre
+I first count the number of movies on various subjects, and comedies and action movies are the most.
+
+```{r movies_count}
+movies_count <- movies %>%  # assigning a variable 
+  group_by(genre) %>% # grouping the movie dataset by genre
+  summarize(movies_count = n()) %>%  # using the summarise function to count the no of movies in each genre
+  slice_max(order_by = movies_count, n = 10) %>%
+  ggplot(aes(x = movies_count, 
+             y = fct_reorder(genre, movies_count))) +
+  geom_col() +
+  theme_bw() +
+  labs(title = "Movies by Genre")
+
+movies_count
+```
+
+Then I also want to look at the gross and budget of these movies.
+
+-   Produce a table with the average gross earning and budget (`gross` and `budget`) by genre. Calculate a variable `return_on_budget` which shows how many \$ did a movie make at the box office for each \$ of its budget. Ranked genres by this `return_on_budget` in descending order.
+
+```{r avg_gross_earning}
+avg_gross_earning_plot <- movies %>%
+  group_by(genre) %>% 
+  summarize(avg_gross_earning = mean(gross),
+            avg_budget = mean(budget),
+            return_on_budget = avg_gross_earning/avg_budget) %>%
+  slice_max(order_by = return_on_budget, n = 10) %>%
+  ggplot(aes(x = return_on_budget, 
+             y = fct_reorder(genre, return_on_budget))) +
+  geom_col() +
+  theme_bw() +
+  labs(title = "Returns by Genre",
+       x = "Return on budget",
+       y = "Genre")
+
+avg_gross_earning_plot
+```
+In terms of return on budget, we can see that musical genre has the highest return. That is partly because low budget is needed for such kind of movies - you don't need many expensive props (eg. cars, skyscrapers), and not too much money to spend in post production to get fancy special effects.
+
+### Directors
+Let's take a look about what  the top 15 directors who have created the highest gross revenue in the box office.
+```{r total_gross_amount}
+movies %>%  
+    group_by(director) %>%  
+    summarize(total_gross_amount = sum(gross),
+        mean_gross_amount = mean(gross),
+        median_gross_amount = median(gross), 
+        standard_deviation_gross_amount = sd(gross)) %>%
+    slice_max(order_by = total_gross_amount, n=15) 
+```
+
+Are the differences in ratings in line with differences in gross? Let's have a look.
+
+```{r, graph}
+ci_interval <- movies %>%
+  group_by(director) %>% 
+  summarize(avg = mean(rating),
+            sd =sd(rating),
+            count = n(),
+            se = sd / sqrt(count),
+            t_critical = qt(0.975, count-1),
+            lower = avg - se *t_critical,
+            upper = avg + se *t_critical) %>% 
+  filter(count >= 10) %>%
+  slice_max(order_by = avg, n = 10) %>%
+  ggplot(aes(x = avg, y = fct_reorder(director, avg))) +
+  geom_point(aes(x = avg, color = director), size = 3) +
+  geom_errorbar(aes(xmin = lower, xmax = upper, color = director), width = 0.1, size = 2) +
+  labs(title = "Directors of Top 10 Average Ratings",
+       x = "Average Ratings",
+       y = "Directors")
+
+ci_interval
+```

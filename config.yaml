@@ -80,7 +80,7 @@ params:
         url: blogs/About_me
       - image: pic02.jpg
         subtitle: Self evaluation
-        title: Definition of \"me\"
+        title: Definition of "me"
         url: blogs/homework1.html
       - image: pic03.jpg
         subtitle: Lorem Etiam Nullam
