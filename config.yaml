@@ -55,52 +55,56 @@ params:
         label: LinkedIn
         url: https://www.linkedin.cn/incareer/in/yuqiao-shi-52639a20a
   image: ''
-  name: Your name
+  name: Joy Shi
   navigation:
     button1:
-      - name: Get Started
+      - name: About me
+        url: Self-introduction
+    button2:
+      - name: Projects
         url: blogs
     links:
       - name: Home
         url: '#'
-      - name: Blogs
+      - name: Projects
         url: blogs
-      - name: Generic Blog
-        url: blogs/ipsum
-      - name: Elements
-        url: elements.html
+      - name: CV
+        url: CV_Yuqiao Shi.pdf
+      - name: About me
+        url: Self-introduction
     menu: Menu
-    title: Forty
+    title: Joy Shi
   tiles:
     enable: yes
     showcase:
       - image: pic01.jpg
         subtitle: Do you want to know more about my life?
-        title: Life Silhouette
-        url: About_me
+        title: About me
+        url: Self-introduction
       - image: pic02.jpg
-        subtitle: 
-        title: Hobbies and Interests
-        url: homework1.html
-      - image: pic03.jpg
         subtitle: Looking for chances in investment banking.
         title: My CV
         url: CV_Yuqiao Shi.pdf
+#      - image: pic03.jpg
+#        subtitle: Looking for chances in investment banking.
+#        title: My CV
+#        url: CV_Yuqiao Shi.pdf
+#      - image: pic04.jpg
+#        subtitle: My project
+#        title: Analysis of IMDB Movies
+#        url: IMDB Analysis
       - image: pic04.jpg
-        subtitle: My project
-        title: Analysis of IMDB Movies
-        url: IMDB Analysis
-      - image: pic05.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Consequat
-        url: blogs/ipsum
-      - image: pic06.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Etiam
-        url: blogs/ipsum
+        subtitle: Click to see what I am doing recently.
+        title: Recent things
+        url: Recent
+#      - image: pic06.jpg
+#        subtitle: Feugiat Amet Tempus
+#        title: Etiam
+#        url: blogs/ipsum
   two:
     buttonText: My Projects
     enable: yes
-    subtitle: 
+    subtitle: Click to see my group projects about IMDB Analysis, Climate Changes,
+    and more.
     title: Know More
     url: blogs

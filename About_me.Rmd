@@ -1,0 +1,41 @@
+---
+title: "About_me"
+author: "Joy"
+image: pic02.jpg
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# **My Hometown**
+
+## 1. Hometown
+
+![](contents%5Cblogs%5CKunming.jpg)
+
+I grew up in Kunming, a city lies in southwest China. The climate there is very nice - warm in winter and cool in summer - for which people call it "City of Spring".
+
+## 2. Hobbies
+
+-   **Debate**:I joined the debate team once I entered University, and I have participated in more than 20 debate games.
+
+-   **Board Game**: Board games like Live Action Role Play(LARP), Porker and chess always help me relax. Besides, I can also make many new friends when playing board games with others.
+
+-   **Guitar**: Pop music is my favorite. To sing songs I like, I learn to play guitar in my high school.
+
+## 2. Pervious Education
+
+-   I got my pre university education in my hometown Kunming.
+
+-   In 2018, I entered Renmin University of China, a beautiful college in Beijing. I majored in Financial Management to learn a lot about accounting and finance; and I minored in Management Science to improve my data analytics skills.
+
+## 3. Music
+
+-   Pop music
+
+-   Rock & Roll
+
+## 4. Books
+
+-   Harry Potter Series
+
+-   Twilight
