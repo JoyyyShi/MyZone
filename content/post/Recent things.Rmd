@@ -1,0 +1,30 @@
+---
+categories:  
+- ""    #the front matter should be like the one found in, e.g., blog2.md. It cannot be like the normal Rmd we used
+- ""
+date: "2022-09-20"
+description: What I am doing recently?  # the title that will show up once someone gets to this page
+draft: false
+image: me.jpg # save picture in \static\img\blogs. Acceptable formats= jpg, jpeg, or png . Your iPhone pics wont work
+
+keywords: ""
+slug: Recent # slug is the shorthand URL address... no spaces plz
+title: What I am doing recently? 
+---
+
+## 1. Coding
+
+Reading for my Masters in Analytics and Management Degree, I tried hard to learn R and SQL.
+
+## 2. Recruiting
+
+It is time to apply for summer internship programme of 2023 for us to get our ideal job. For me, I am actively seek opportunities in investment banking and private equities.
+
+Good luck for me :)
+
+## 3. Reading
+
+I keep the habit of reading because I think it is important to give myself some time to think.
+
+Mr. Toad's Going to a Shrink is one of the books I've been reading lately.
+

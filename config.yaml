@@ -104,7 +104,6 @@ params:
   two:
     buttonText: My Projects
     enable: yes
-    subtitle: Click to see my group projects about IMDB Analysis, Climate Changes,
-    and more.
+    subtitle: "Click to see my previous projects in IMDB Analysis, Climate and Temperature."
     title: Know More
     url: blogs
