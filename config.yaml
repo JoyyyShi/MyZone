@@ -57,21 +57,15 @@ params:
   image: ''
   name: Joy Shi
   navigation:
-    button1:
-      - name: About me
-        url: Self-introduction
-    button2:
-      - name: Projects
-        url: blogs
     links:
       - name: Home
         url: '#'
       - name: Projects
         url: blogs
       - name: CV
-        url: CV_Yuqiao Shi.pdf
+        url: blogs/CV_Yuqiao Shi.pdf
       - name: About me
-        url: Self-introduction
+        url: blogs/about_me.html
     menu: Menu
     title: Joy Shi
   tiles:
@@ -80,15 +74,15 @@ params:
       - image: pic01.jpg
         subtitle: Do you want to know more about my life?
         title: About me
-        url: Self-introduction
+        url: blogs/about_me.html
       - image: pic02.jpg
         subtitle: Looking for chances in investment banking.
         title: My CV
-        url: CV_Yuqiao Shi.pdf
-#      - image: pic03.jpg
-#        subtitle: Looking for chances in investment banking.
-#        title: My CV
-#        url: CV_Yuqiao Shi.pdf
+        url: blogs/CV_Yuqiao Shi.pdf
+      - image: pic03.jpg
+        subtitle: 
+        title: Climate Analysis
+        url: blogs/climate
 #      - image: pic04.jpg
 #        subtitle: My project
 #        title: Analysis of IMDB Movies
@@ -96,14 +90,13 @@ params:
       - image: pic04.jpg
         subtitle: Click to see what I am doing recently.
         title: Recent things
-        url: Recent
-#      - image: pic06.jpg
-#        subtitle: Feugiat Amet Tempus
-#        title: Etiam
-#        url: blogs/ipsum
+        url: blogs/recent_things
+      - image: pic06.jpg
+        subtitle: 
+        title: IMDB Analysis
+        url: blogs/imdb_analysis
   two:
     buttonText: My Projects
     enable: yes
     subtitle: "Click to see my previous projects in IMDB Analysis, Climate and Temperature."
     title: Know More
-    url: blogs
